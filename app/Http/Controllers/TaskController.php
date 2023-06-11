@@ -34,7 +34,7 @@ class TaskController extends Controller
     {
         //
         Task::create($request->validated());
-        return redirect()-route('tasks.index');
+        return redirect() -> route('tasks.index');
     }
 
     /**
@@ -51,7 +51,7 @@ class TaskController extends Controller
     public function edit(Task $task)
     {
         //
-        return view('tasks.index', compact('tasks'));
+        return view('tasks.edit', compact('task'));
     }
 
     /**
@@ -71,6 +71,6 @@ class TaskController extends Controller
     {
         //
         $task->delete();
-        return redirect('tasks.index');
+        return redirect()->route('tasks.index');
     }
 }
