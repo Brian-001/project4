@@ -21,9 +21,6 @@ class AdminUserSeeder extends Seeder
          * A permission called 'manage tasks'
          * Assign administarator role
          */
-        $adminRole = Role::create(['name' => 'Administrator']);
-        $permission = Permission::create(['name' => 'manage tasks']);
-        $permission->assignRole($adminRole);
 
         $adminUser = User::factory()->create([
             'email' => 'admin@admin.com',
