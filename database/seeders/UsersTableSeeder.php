@@ -16,21 +16,28 @@ class UsersTableSeeder extends Seeder
         //
         $users = [
             [
+                'id' =>1,
+                'name' => 'Admin',
+                'email' => 'admin@gmail.com',
+                'password' => bcrypt('apasswsord'),
+                'remember_token' =>null,
+            ],
+            [
                 'id' => 2,
                 'name' => 'Editor',
                 'email' => 'editor@gmail.com',
-                'password' => bcrypt('password'),
+                'password' => bcrypt('epassword'),
                 'remember_token' => null,
             ],
             [
                 'id' => 3,
                 'name' => 'Designer',
                 'email' => 'designer@gmail.com',
-                'password' => bcrypt('password'),
+                'password' => bcrypt('dpassword'),
                 'remember_token' => null,
             ],
         ];
 
-        User::insert('$users');
+        User::insert($users);
     }
 }

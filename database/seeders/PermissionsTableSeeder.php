@@ -24,15 +24,6 @@ class PermissionsTableSeeder extends Seeder
                 'id' => 2,
                 'title' => 'task_access'
             ],
-            [
-                'id' => 3,
-                'title' => 'blog_access'
-            ],
-            [
-                'id' => 4,
-                'title' => 'photo_access'
-            ]
-
         ];
         Permission::insert($permissions);
     }

@@ -22,10 +22,10 @@ class AdminUserSeeder extends Seeder
          * Assign administarator role
          */
 
-        $adminUser = User::factory()->create([
-            'email' => 'admin@admin.com',
-            'password' => Hash::make('SecurePassword')
-        ]);
-        $adminUser->assignRole('Administrator');
+        // $adminUser = User::factory()->create([
+        //     'email' => 'admin@admin.com',
+        //     'password' => Hash::make('SecurePassword')
+        // ]);
+        // $adminUser->assignRole('Administrator');
     }
 }
