@@ -21,7 +21,7 @@ class RolesTableSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'title' => 'Editor'
+                'title' => 'User'
             ]
             // [
             //     'id' => 3,

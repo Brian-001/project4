@@ -22,11 +22,11 @@ class PermissionRoleTableSeeder extends Seeder
 
         //Filter out Permissions whose title starts with 'user'
         $user_permissions = $admin_permissions->filter(function($permission){
-            return substr($permission->title, 0,5) != 'user_';
+            return substr($permission->title, 0, 5) != 'user_';
         });
 
         //Attach filtered permission to the user role (role_id 2)
-        Role::findorFail(2)->permissions()->sync($user_permissions);
+        Role::findOrFail(2)->permissions()->sync($user_permissions);
         
     }
 }

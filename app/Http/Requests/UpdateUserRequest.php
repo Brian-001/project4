@@ -24,14 +24,14 @@ class UpdateUserRequest extends FormRequest
     {
         return [
             //
-            'name'=>['string', 'required'],
-            'email'=>['required', 'unique:users, email' . request()->route('user')->id],
-            'roles.*'=>['integer'],
-            'roles' => ['required', 'array'],
+            'name' =>['string', 'required',],
+            'email' =>['required', 'unique:users,email,' . request()->route('user')->id],
+            'roles.*' =>['integer',],
+            'roles' => ['required', 'array',],
         ];
     }
 
     public function authorize(){
-        Gate::allows('users_access');
+        Gate::allows('user_access');
     }
 }
