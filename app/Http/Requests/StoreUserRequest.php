@@ -25,7 +25,7 @@ class StoreUserRequest extends FormRequest
      * 'roles.*' field indicates an array of role IDs and each ID must be an integer
      * 'roles' is required and must be an array 
     */
-    public function rules(): array
+    public function rules()
     {
         return [
             'name'=>['string', 'required',],

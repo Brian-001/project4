@@ -12,7 +12,7 @@ class PermissionRoleTableSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run()
     {
         //Retrieve all permissions from the permissions table
         $admin_permissions = Permission::all();
